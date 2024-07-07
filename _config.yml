@@ -102,6 +102,6 @@ remote_theme: hydecorp/hydejack
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/zengpufan/zengpufan.github.io
+  repository: git@github.com:zengpufan/zengpufan.github.io.git
   branch: master
 
