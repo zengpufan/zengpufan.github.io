@@ -1,6 +1,9 @@
 ---
-title: 使用hexo建立GitHub博客
+title: 使用Hexo建立Github博客
+date: 2024-07-22 11:49:37
+tags:
 ---
+
 ## 摘要
 本文主要介绍通过hexo框架搭建个人博客，并将博客部署到github平台上。
 ## 所需技术简介
@@ -12,9 +15,9 @@ github pages官网：https://pages.github.com/
 1. 安装Node.js  
 Node.js官网 https://nodejs.org/  
 点击download即可
-![avator](pic/使用hexo建立GitHub博客/1.jpg)
+![avator](使用Hexo简历GitHub博客/1.jpg)
 
-2. 安装hexo  
+1. 安装hexo  
 进入cmd，输入
     ```cmd
     npm install -g hexo-cli
@@ -24,12 +27,15 @@ Node.js官网 https://nodejs.org/
     hexo -v
     ```
     查看是否安装成功
-    ![avator](pic/使用hexo建立GitHub博客/2.jpg)
+    ![avator](使用Hexo简历GitHub博客/2.jpg)
 
-3. 初始化hexo
+1. 初始化hexo  
 创建一个空的项目文件夹，进入cmd，输入以下命令
     ```
     hexo init
     ```
-    ![avator](pic/使用hexo建立GitHub博客/3.jpg)
+    ![avator](使用Hexo简历GitHub博客/3.jpg)
     如上图所示，hexo项目创建成功
+        
+    Hexo的初始项目结构如下
+    
