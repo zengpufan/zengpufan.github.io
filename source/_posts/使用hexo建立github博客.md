@@ -32,4 +32,4 @@ Node.js官网 https://nodejs.org/
     hexo init
     ```
     ![avator](pic/使用hexo建立GitHub博客/3.jpg)
-    
+    如上图所示，hexo项目创建成功
