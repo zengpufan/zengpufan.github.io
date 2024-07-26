@@ -97,19 +97,27 @@
 <li>github pages<br>github pages可以针对一个github账号或者一个github仓库创建一个网页。<br>github pages官网：<a target="_blank" rel="noopener" href="https://pages.github.com/">https://pages.github.com/</a></li>
 </ol>
 <h2 id="Hexo安装配置"><a href="#Hexo安装配置" class="headerlink" title="Hexo安装配置"></a>Hexo安装配置</h2><ol>
-<li><p>安装Node.js<br>Node.js官网 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a><br>点击download即可<br><img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/1.jpg" alt="avator"></p>
-<img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/1.jpg" class title="This is an test image">
+<li><p>安装Node.js<br>Node.js官网 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a><br>点击download即可<br><img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/1.jpg"></p>
 </li>
-<li><p>安装hexo<br>进入cmd，输入</p>
+<li><p>安装hexo  </p>
+<p>进入cmd，输入</p>
  <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p> 安装完成后，输入</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-<p> 查看是否安装成功<br> <img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/2.jpg" alt="avator"></p>
+<p> 查看是否安装成功<br> <img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/2.jpg"></p>
 </li>
-<li><p>初始化hexo<br>创建一个空的项目文件夹，进入cmd，输入以下命令</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p> <img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/3.jpg" alt="avator"><br> 如上图所示，hexo项目创建成功</p>
-<p> Hexo的初始项目结构如下</p>
+<li><p>初始化hexo<br> 创建一个空的项目文件夹，进入cmd，输入以下命令    </p>
+ <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init  </span><br></pre></td></tr></table></figure>
+<p> 如下图所示，hexo项目创建成功<br> <img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/3.jpg">  </p>
+<p> Hexo的初始项目结构如下:<br> <img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/4.jpg">  </p>
+ <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">_config.yml </span><br><span class="line"><span class="comment"># 该文件是网站的配置档案，网站的配置基本上写在这里，后面会详细说明</span></span><br><span class="line">package.json </span><br><span class="line"><span class="comment"># 依赖包的配置文件</span></span><br><span class="line">scaffolds </span><br><span class="line"><span class="comment"># 模板文件夹，新建文章时，Hexo会根据scaffold创建文件夹 </span></span><br><span class="line">source </span><br><span class="line"><span class="comment"># 资源文件夹，用来存储用户资源的地方（一般指文章的原稿和相关图片资源）</span></span><br><span class="line"><span class="comment"># 除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。 # Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</span></span><br><span class="line">themes </span><br><span class="line"><span class="comment"># 主题文件夹。 Hexo 会根据主题来生成静态页面</span></span><br><span class="line"><span class="comment"># 主题文件夹规定网站的样式，模板文件夹规定文章的排版</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Hexo快速开始<br>输入“生成指令”</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>可以将markdown文档转换为网页  </p>
+<p>输入启动服务器指令</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>即可启动服务器，看到初始网站的样式<br><img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/5.jpg"></p>
 </li>
 </ol>
 
