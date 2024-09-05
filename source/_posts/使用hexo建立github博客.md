@@ -139,7 +139,22 @@ hexo d
 
 ## 自定义主题
 1.主题的相关文件存放在themes文件夹下，需要修改主题时，将自定义的主题放在该文件夹下即可。 
-系统默认的主题是landscape
+系统默认的主题是landscape  
 2.通过修改_config.yml下的配置就可以更改博客的主题
 ![](./使用Hexo建立Github博客/9.jpg)
+3.主题文件的结构如下图所示  
+```
+my-theme/
+├── _config.yml      # 主题配置文件
+├── layout/          # 模板文件夹
+│   ├── layout.ejs   # 布局模板
+│   ├── index.ejs    # 首页模板
+│   ├── post.ejs     # 文章页模板
+├── source/          # 静态资源文件夹 (CSS, JS, 图片等)
+│   ├── css/
+│   ├── js/
+│   ├── images/
+└── languages/       # 语言文件夹 (可选)
+
+```
 ## 撰写博客
