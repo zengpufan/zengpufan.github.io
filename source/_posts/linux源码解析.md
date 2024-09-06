@@ -17,7 +17,7 @@ tags:
 10. io_uring: 提供用于异步 I/O 操作的 io_uring 子系统的实现。
 11. ipc: 包含进程间通信机制（如信号量、消息队列和共享内存）的实现。
 12. kernel: 包含核心内核代码，如调度程序、信号处理等。
-13. lib: 包含内核使用的通用库函数。
+13. lib: 包含内核使用的通用库函数，例如进程创建等。
 14. mm: 包含内存管理子系统的代码，例如内存分配、分页和虚拟内存管理。
 15. net: 包含网络协议栈的实现，例如 TCP/IP 协议栈。
 16. samples: 包含示例代码，演示如何使用内核的各种 API 和子系统。
@@ -35,13 +35,13 @@ tags:
 ```c
 void start_kernel(void)
 {
-	char *command_line;
-	char *after_dashes;
+	char *command_line;//指向初始化命令行的指针
+	char *after_dashes;//指向破折号后面的指令
 
-	set_task_stack_end_magic(&init_task);
-	smp_setup_processor_id();
-	debug_objects_early_init();
-	init_vmlinux_build_id();
+	set_task_stack_end_magic(&init_task);//创建初始化线程，将其放在栈中
+	smp_setup_processor_id();//计算机可能有多个处理器，函数用于设置当前正在启动的处理器（CPU）的 ID。
+	debug_objects_early_init();//debug object 是一个对象生命周期管理系统
+	init_vmlinux_build_id(); //初始化内核的 build_id，用于标识内核版本。
 
 	cgroup_init_early();
 
@@ -52,8 +52,8 @@ void start_kernel(void)
 	 * Interrupts are still disabled. Do necessary setups, then
 	 * enable them.
 	 */
-	boot_cpu_init();
-	page_address_init();
+	boot_cpu_init();//初始化引导cpu，一般计算机启动会从一个特定的cpu开始初始化
+	page_address_init();//分页系统初始化
 	pr_notice("%s", linux_banner);
 	early_security_init();
 	setup_arch(&command_line);
@@ -244,3 +244,5 @@ void start_kernel(void)
 #endif
 }
 ```
+# 分页管理系统
+在start_kernel()函数中，page_address_init();函数调用进行了分页系统的初始化。
