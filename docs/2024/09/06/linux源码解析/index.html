@@ -4,15 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>linux源码解析 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://zengpufan.github.io/index.html">
+  <meta name="description" content="顶层文件结构  arch: 包含与不同架构相关的代码，例如 x86、ARM、MIPS 等。在这个文件夹下，将不同架构的汇编代码转换为c语言函数结构供调用。 block: 包含与块设备层相关的代码，例如硬盘驱动器和其他块设备的处理。 certs: 包含用于内核模块签名的证书文件。 crypto: 包含加密算法和加密 API 的实现。 Documentation: 包含有关内核特性的文档和内核开发的指">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux源码解析">
+<meta property="og:url" content="https://zengpufan.github.io/2024/09/06/linux%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="顶层文件结构  arch: 包含与不同架构相关的代码，例如 x86、ARM、MIPS 等。在这个文件夹下，将不同架构的汇编代码转换为c语言函数结构供调用。 block: 包含与块设备层相关的代码，例如硬盘驱动器和其他块设备的处理。 certs: 包含用于内核模块签名的证书文件。 crypto: 包含加密算法和加密 API 的实现。 Documentation: 包含有关内核特性的文档和内核开发的指">
 <meta property="og:locale">
+<meta property="og:image" content="https://zengpufan.github.io/2024/09/06/linux%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/1.jpg">
+<meta property="article:published_time" content="2024-09-06T02:55:52.000Z">
+<meta property="article:modified_time" content="2024-09-06T05:21:54.554Z">
 <meta property="article:author" content="zpf">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zengpufan.github.io/2024/09/06/linux%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,9 +75,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-linux源码解析" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-linux源码解析" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/09/06/linux%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" class="article-date">
   <time class="dt-published" datetime="2024-09-06T02:55:52.000Z" itemprop="datePublished">2024-09-06</time>
@@ -84,8 +88,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/09/06/linux%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">linux源码解析</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      linux源码解析
     </h1>
   
 
@@ -131,179 +135,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-深度学习经典论文总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/08/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" class="article-date">
-  <time class="dt-published" datetime="2024-08-10T06:15:35.000Z" itemprop="datePublished">2024-08-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/08/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">深度学习经典论文总结</a>
-    </h1>
+    <a href="/2024/08/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">深度学习经典论文总结</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文总结深度学习（机器学习）方向的经典论文，附有中英文摘要、论文地址和创新点归纳。</p>
-<h2 id="Gradient-Based-Learning-Applied-to-Document-Recognition"><a href="#Gradient-Based-Learning-Applied-to-Document-Recognition" class="headerlink" title="Gradient-Based Learning Applied to Document Recognition"></a>Gradient-Based Learning Applied to Document Recognition</h2><p>1.这篇文章提出了CNN网络<br>原文链接：<a target="_blank" rel="noopener" href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf">http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf</a><br>2.英文摘要： </p>
-<h2 id="A-learning-algorithm-for-boltzmann-machines"><a href="#A-learning-algorithm-for-boltzmann-machines" class="headerlink" title="A learning algorithm for boltzmann machines"></a>A learning algorithm for boltzmann machines</h2><p>1.这篇文章提出了 Boltzmann Machines算法，并且指出深度学习实际上是一个最优化算法。<br>原文链接：<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0364021385800124">https://www.sciencedirect.com/science/article/pii/S0364021385800124</a></p>
-<h2 id="A-fast-learning-algorithm-for-deep-belief-nets"><a href="#A-fast-learning-algorithm-for-deep-belief-nets" class="headerlink" title="A fast learning algorithm for deep belief nets"></a>A fast learning algorithm for deep belief nets</h2><p>原文链接：<a target="_blank" rel="noopener" href="https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf">https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf</a></p>
-<h2 id="ImageNet-Classification-with-Deep-Convolutional-Neural-Networks"><a href="#ImageNet-Classification-with-Deep-Convolutional-Neural-Networks" class="headerlink" title="ImageNet Classification with Deep Convolutional Neural Networks"></a>ImageNet Classification with Deep Convolutional Neural Networks</h2><p>本文提出了AlexNet，AlexNet在ImageNet数据集上取得了突破性的表现<br>原文链接：<a target="_blank" rel="noopener" href="https://dl.acm.org/doi/pdf/10.1145/3065386">https://dl.acm.org/doi/pdf/10.1145/3065386</a></p>
-<h2 id="Generative-Adversarial-Nets"><a href="#Generative-Adversarial-Nets" class="headerlink" title="Generative Adversarial Nets"></a>Generative Adversarial Nets</h2><p>本文提出了GAN（生成对抗神经网络）<br>原文链接：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1406.2661">https://arxiv.org/abs/1406.2661</a></p>
-<h2 id="Deep-Residual-Learning-for-Image-Recognition"><a href="#Deep-Residual-Learning-for-Image-Recognition" class="headerlink" title="Deep Residual Learning for Image Recognition"></a>Deep Residual Learning for Image Recognition</h2><p>原文链接：Deep Residual Learning for Image Recognition</p>
-<h2 id="Attention-Is-All-You-Need"><a href="#Attention-Is-All-You-Need" class="headerlink" title="Attention Is All You Need"></a>Attention Is All You Need</h2><p>原文链接：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zengpufan.github.io/2024/08/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" data-id="clznxv2wv0000tsu0dekretca" data-title="深度学习经典论文总结" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-使用Hexo建立Github博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time class="dt-published" datetime="2024-07-22T03:49:37.000Z" itemprop="datePublished">2024-07-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/">使用Hexo建立Github博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本文主要介绍通过hexo框架搭建个人博客，并将博客部署到github平台上。</p>
-<h2 id="所需技术简介"><a href="#所需技术简介" class="headerlink" title="所需技术简介"></a>所需技术简介</h2><ol>
-<li>Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</li>
-<li>github pages<br>github pages可以针对一个github账号或者一个github仓库创建一个网页。<br>github pages官网：<a target="_blank" rel="noopener" href="https://pages.github.com/">https://pages.github.com/</a></li>
-</ol>
-<h2 id="Hexo安装配置"><a href="#Hexo安装配置" class="headerlink" title="Hexo安装配置"></a>Hexo安装配置</h2><p>1.安装Node.js<br>Node.js官网 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a><br>点击download即可<br><img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/1.jpg"></p>
-<p>2.安装hexo  </p>
-<p>   进入cmd，输入<br>    <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><br>    安装完成后，输入<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure><br>    查看是否安装成功<br>    <img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/2.jpg"></p>
-<p>3.初始化hexo<br>    创建一个空的项目文件夹，进入cmd，输入以下命令<br>    <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init  </span><br></pre></td></tr></table></figure><br>    如下图所示，hexo项目创建成功<br>    <img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/3.jpg">  </p>
-<pre><code>Hexo的初始项目结构如下:  
-![](使用Hexo建立Github博客/4.jpg)  
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">_config.yml </span><br><span class="line"><span class="comment"># 该文件是网站的配置档案，网站的配置基本上写在这里，后面会详细说明</span></span><br><span class="line">package.json </span><br><span class="line"><span class="comment"># 依赖包的配置文件</span></span><br><span class="line">scaffolds </span><br><span class="line"><span class="comment"># 模板文件夹，新建文章时，Hexo会根据scaffold创建文件夹 </span></span><br><span class="line">source </span><br><span class="line"><span class="comment"># 资源文件夹，用来存储用户资源的地方（一般指文章的原稿和相关图片资源）</span></span><br><span class="line"><span class="comment"># 除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。 # Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</span></span><br><span class="line">themes </span><br><span class="line"><span class="comment"># 主题文件夹。 Hexo 会根据主题来生成静态页面</span></span><br><span class="line"><span class="comment"># 主题文件夹规定网站的样式，模板文件夹规定文章的排版</span></span><br></pre></td></tr></table></figure>
-</code></pre>
-<p>4.Hexo快速开始<br>   输入“生成指令”<br>   <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure><br>   可以将markdown文档转换为网页  </p>
-<p>   输入启动服务器指令<br>   <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><br>   即可启动服务器，看到初始网站的样式<br>   <img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/5.jpg"></p>
-<h2 id="Github-Pages配置"><a href="#Github-Pages配置" class="headerlink" title="Github Pages配置"></a>Github Pages配置</h2><p>1.简介  </p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GitHub Pages is designed to host your personal, organization, or project pages from a GitHub repository.</span><br><span class="line"><span class="comment">// github page基于一个仓库，创建一个网页</span></span><br></pre></td></tr></table></figure>
-<p>github page的官方文档如下：<br><a target="_blank" rel="noopener" href="https://pages.github.com/">https://pages.github.com/</a></p>
-<p>2.创建一个github仓库<br><img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/6.jpg"><br>在创建仓库时，有两点需要注意：<br>第一，仓库的名称为</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xxx.github.io</span><br><span class="line"><span class="comment"># 其中xxx替换为用户名</span></span><br></pre></td></tr></table></figure>
-<p>第二，仓库需要设置为public </p>
-<p>3.进入仓库的设置页面，找到pages选项<br><img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/7.jpg"><br><img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/8.jpg"><br>其中，<br>Source选择deploy from a branch<br>文件夹图标选择&#x2F;doc，这个选项是指网站的根目录，也就是主页所在的文件夹<br>最后一个域名根据需要进行设置</p>
-<h2 id="再次配置hexo，完成部署"><a href="#再次配置hexo，完成部署" class="headerlink" title="再次配置hexo，完成部署"></a>再次配置hexo，完成部署</h2><p>1.首先，按照上文所说，打开_config.yml<br>2.安好说明修改url部分</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line">url: https://zengpufan.github.io/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true <span class="comment"># Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span></span><br><span class="line">  trailing_html: true <span class="comment"># Set to false to remove trailing &#x27;.html&#x27; from permalinks</span></span><br></pre></td></tr></table></figure>
-<p>3.修改Directory</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Directory</span></span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: docs</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br></pre></td></tr></table></figure>
-<p>其中，需要注意，public_dir需要修改为docs，由于我们需要把生成的html代码放在docs下，因此需要这样修改配置<br>4.修改development配置  </p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:zengpufan/zengpufan.github.io.git  <span class="comment"># Github pages地址</span></span><br><span class="line">  branch: master <span class="comment">#部署到的分支名称</span></span><br></pre></td></tr></table></figure>
-<p>5.执行部署指令 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><p>1.主题的相关文件存放在themes文件夹下，需要修改主题时，将自定义的主题放在该文件夹下即可。<br>系统默认的主题是landscape<br>2.通过修改_config.yml下的配置就可以更改博客的主题<br><img src="/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/9.jpg"><br>3.主题文件的结构如下图所示  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">my-theme/</span><br><span class="line">├── _config.yml      # 主题配置文件</span><br><span class="line">├── layout/          # 模板文件夹</span><br><span class="line">│   ├── layout.ejs   # 布局模板</span><br><span class="line">│   ├── index.ejs    # 首页模板</span><br><span class="line">│   ├── post.ejs     # 文章页模板</span><br><span class="line">├── source/          # 静态资源文件夹 (CSS, JS, 图片等)</span><br><span class="line">│   ├── css/</span><br><span class="line">│   ├── js/</span><br><span class="line">│   ├── images/</span><br><span class="line">└── languages/       # 语言文件夹 (可选)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="撰写博客"><a href="#撰写博客" class="headerlink" title="撰写博客"></a>撰写博客</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zengpufan.github.io/2024/07/22/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8BGithub%E5%8D%9A%E5%AE%A2/" data-id="clywhj4gq000094u0fclebd57" data-title="使用Hexo建立Github博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/07/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-07-07T10:21:12.053Z" itemprop="datePublished">2024-07-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zengpufan.github.io/2024/07/07/hello-world/" data-id="clywhj4gu000194u0aek960qa" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
