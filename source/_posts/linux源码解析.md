@@ -245,4 +245,8 @@ void start_kernel(void)
 }
 ```
 # 分页管理系统
-在start_kernel()函数中，page_address_init();函数调用进行了分页系统的初始化。
+在start_kernel()函数中，  
+page_address_init();  
+函数调用进行了分页系统的初始化。
+
+
