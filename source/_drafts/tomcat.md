@@ -24,4 +24,12 @@ startup.sh  //linux
 http://localhost:8080/
 ```
 # tomcat顶层目录简介
+![](./tomcat/3.jpg)
+1. bin目录，包含相关的脚本工具。例如启动和停止tomcat。
+2. conf目录，配置文件目录。
+3. lib目录，tomcat运行时所需要的类库（jar）。
+4. logs日志文件
+5. temp，存储程序运行时的临时文件
+6. webapps，将war包部署到这个文件夹下。
+7. work，存储jsp编译之后的文件。
 
