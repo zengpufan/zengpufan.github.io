@@ -165,3 +165,51 @@ my-theme/
 
 ```
 ## 撰写博客
+
+
+## 在hexo中插入图片
+在这一小节中，我们将介绍如何在hexo中插入图片。此外，我们还将介绍对应部分的源码。这是由于我们在使用hexo的过程中，发现在跨OS的情况下，图片路径的生成会出现问题。  
+在hexo的官方文档中提到，在3.1.0版本中，可以直接解析markdown文档中的图片。  
+如果需要解析markdown中的图片，需要配置如下配置：  
+```yml
+# _config.yml
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+```
+hexo的markdown解析文档位于  
+```
+node_modeles -> hexo-renderer-marked -> lib ->renderer.js
+```
+对于图像的html生成部分，代码如下：
+```js
+  // Prepend root to image path
+  image(href, title, text) {
+    const { hexo, options } = this;
+    const { relative_link } = hexo.config;
+    const { lazyload, figcaption, prependRoot, postPath } = options;
+
+    if (!/^(#|\/\/|http(s)?:)/.test(href) && !relative_link && prependRoot) {
+      if (!href.startsWith('/') && !href.startsWith('\\') && postPath) {
+        const PostAsset = hexo.model('PostAsset');
+        // findById requires forward slash
+        const asset = PostAsset.findById(join(postPath, href.replace(/\\/g, '/')));
+        // asset.path is backward slash in Windows
+        if (asset) href = asset.path.replace(/\\/g, '/');
+      }
+      href = url_for.call(hexo, href);
+    }
+
+    let out = `<img src="${encodeURL(href)}"`;
+    if (text) out += ` alt="${text}"`;
+    if (title) out += ` title="${title}"`;
+    if (lazyload) out += ' loading="lazy"';
+
+    out += '>';
+    if (figcaption && text) {
+      return `<figure>${out}<figcaption aria-hidden="true">${text}</figcaption></figure>`;
+    }
+    return out;
+  }
+```
